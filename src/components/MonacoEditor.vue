@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="container"></div>
+  <div ref="container" class="editor-container"></div>
 </template>
 
 <script setup>
@@ -28,7 +28,7 @@ const defaultOptions = {
   //   autoClosingDelete: "always", // 是否自动删除结束括号(包括中括号) "always" | "never" | "auto"
   //   autoClosingOvertype: "always", // 是否关闭改写 即使用insert模式时是覆盖后面的文字还是不覆盖后面的文字 "always" | "never" | "auto"
   //   autoClosingQuotes: "always", // 是否自动添加结束的单引号 双引号 "always" | "languageDefined" | "beforeWhitespace" | "never"
-  //   automaticLayout: true, // 自动布局
+  automaticLayout: true, // 自动布局
   //   codeLens: false, // 是否显示codeLens 通过 CodeLens，你可以在专注于工作的同时了解代码所发生的情况 – 而无需离开编辑器。 可以查找代码引用、代码更改、关联的 Bug、工作项、代码评审和单元测试。
   //   codeLensFontFamily: "", // codeLens的字体样式
   //   codeLensFontSize: 13, // codeLens的字体大小
@@ -72,7 +72,7 @@ const defaultOptions = {
   // autoIndent: "full",
   // formatOnType: true,
   // formatOnPaste: true,
-  // domReadOnly: true,
+  domReadOnly: false,
   tabSize: 2,
   wordWrap: "on",
   wrappingIndent: "same",
@@ -158,8 +158,8 @@ defineExpose({
 });
 </script>
 
-<style lang="less">
-.container {
+<style scoped lang="less">
+.editor-container {
   width: 100%;
   height: 100%;
   background: gainsboro;
