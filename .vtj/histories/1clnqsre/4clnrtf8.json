@@ -1,0 +1,53 @@
+{
+  "id": "4clnrtf8",
+  "label": "2025/11/14 11:45:06",
+  "remark": "",
+  "dsl": {
+    "name": "Test",
+    "locked": false,
+    "inject": [],
+    "state": {},
+    "lifeCycles": {},
+    "methods": {},
+    "computed": {},
+    "watch": [],
+    "css": "",
+    "props": [],
+    "emits": [],
+    "expose": [],
+    "slots": [],
+    "dataSources": {},
+    "__VTJ_BLOCK__": true,
+    "__VERSION__": "1763091906739",
+    "id": "1clnqsre",
+    "nodes": [
+      {
+        "id": "2clnrteo",
+        "name": "XForm",
+        "from": "@vtj/ui",
+        "invisible": false,
+        "locked": false,
+        "children": [
+          {
+            "id": "3clnrteo",
+            "name": "XField",
+            "from": "@vtj/ui",
+            "invisible": false,
+            "locked": false,
+            "children": [],
+            "props": {
+              "label": "字段名称"
+            },
+            "directives": [],
+            "events": {}
+          }
+        ],
+        "props": {
+          "labelWidth": "100px"
+        },
+        "directives": [],
+        "events": {}
+      }
+    ]
+  }
+}

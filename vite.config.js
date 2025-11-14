@@ -5,6 +5,10 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import monacoEditorPlugin from "vite-plugin-monaco-editor-esm";
+
+// 导入VTJ开发工具
+import { createDevTools } from "@vtj/pro/vite";
+
 // import MonacoEditorNlsPlugin, {
 //   esbuildPluginMonacoEditorNls,
 //   Languages,
@@ -27,6 +31,11 @@ if (process.env.NODE_ENV !== "development") {
       locale: Languages.zh_hans,
       localeData: zh_hans,
     })
+  );
+} else {
+  plugins.push(
+    // 添加VTJ开发工具插件
+    createDevTools()
   );
 }
 
