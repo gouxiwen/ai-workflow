@@ -12,6 +12,10 @@ import "vform3-builds/dist/designer.style.css"; //引入VForm3样式
 import "vform3-builds/dist/render.style.css"; //引入VForm3样式
 import "ant-design-vue/dist/reset.css";
 import "./assets/styles/main.css";
+import setupErrorReport from "./errorReporting";
+import "./metricMonitoring";
+// 如果服务端使用setupSkywalking监控错误和性能
+// import setupSkywalkingReport from './skywalking'
 
 // 1. 引入VTJ核心功能
 import {
@@ -68,5 +72,7 @@ app.use(Antd);
 app.use(ElementPlus);
 app.use(VForm3);
 setupProvider(app);
+setupErrorReport(app);
+// setupSkywalkingReport(app)
 
 app.mount("#app");
